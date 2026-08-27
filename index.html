@@ -8,59 +8,89 @@
   <title>PCC Academic Support Club</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f7f7f7;
+      background-color: #f8f8f8;
       color: #222;
       line-height: 1.6;
     }
 
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
     header {
-      background-color: #7b1e2b;
-      color: white;
-      padding: 18px 8%;
+      background-color: white;
+      padding: 12px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+
       position: sticky;
       top: 0;
       z-index: 1000;
+
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    header h2 {
-      font-size: 24px;
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .logo-area h2 {
+      color: #7b1e2b;
+      font-size: 20px;
     }
 
     nav {
       display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
+      gap: 25px;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      font-weight: bold;
+      color: #333;
+      font-weight: 600;
       transition: 0.3s;
     }
 
     nav a:hover {
-      opacity: 0.7;
+      color: #a32638;
     }
 
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
     .hero {
-      min-height: 520px;
+      min-height: 560px;
+
       background:
         linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.45)
+          rgba(0,0,0,0.50),
+          rgba(0,0,0,0.50)
         ),
         url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
 
@@ -68,86 +98,148 @@
       background-position: center;
 
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
 
       text-align: center;
       color: white;
 
-      padding: 60px 20px;
+      padding: 50px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-logo {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+
+      background-color: white;
+      border-radius: 50%;
+
+      padding: 10px;
+
+      margin-bottom: 25px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     }
 
     .hero h1 {
       font-size: 58px;
+      margin-bottom: 10px;
+    }
+
+    .hero h3 {
+      font-size: 24px;
+      font-weight: normal;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 22px;
+      font-size: 21px;
       margin-bottom: 30px;
     }
 
+
+    /* =========================
+       BUTTON
+    ========================== */
+
     .button {
       display: inline-block;
-      background-color: #7b1e2b;
+
+      background-color: #8d2235;
       color: white;
-      text-decoration: none;
-      padding: 14px 28px;
+
+      padding: 14px 30px;
+
       border-radius: 8px;
+
+      text-decoration: none;
       font-weight: bold;
+
       transition: 0.3s;
     }
 
     .button:hover {
-      background-color: #5f1621;
+      background-color: #681927;
       transform: translateY(-2px);
     }
+
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
 
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 25px;
+      padding: 80px 25px;
     }
 
     section h2 {
-      font-size: 36px;
       text-align: center;
-      margin-bottom: 35px;
+
+      font-size: 38px;
+
       color: #7b1e2b;
+
+      margin-bottom: 40px;
     }
 
-    .about-text {
+    .section-description {
       max-width: 800px;
+
       margin: auto;
+
       text-align: center;
+
       font-size: 18px;
+
       color: #555;
     }
 
+
+    /* =========================
+       CARDS
+    ========================== */
+
     .card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+      gap: 25px;
+
+      margin-top: 40px;
     }
 
     .card {
       background-color: white;
+
+      padding: 30px;
+
       border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
       transition: 0.3s;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+      box-shadow: 0 10px 25px rgba(0,0,0,0.13);
     }
 
     .card h3 {
       color: #7b1e2b;
+
       margin-bottom: 12px;
+
       font-size: 22px;
     }
 
@@ -155,250 +247,486 @@
       color: #555;
     }
 
+
+    /* =========================
+       ADVISOR
+    ========================== */
+
+    .advisor-card {
+      max-width: 650px;
+
+      margin: auto;
+
+      background-color: white;
+
+      padding: 40px;
+
+      border-radius: 16px;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+      text-align: center;
+    }
+
+    .advisor-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .advisor-card h3 {
+      font-size: 26px;
+
+      color: #7b1e2b;
+
+      margin-bottom: 10px;
+    }
+
+    .advisor-card p {
+      color: #555;
+
+      margin-bottom: 6px;
+
+      font-size: 17px;
+    }
+
+    .advisor-card a {
+      color: #7b1e2b;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+    .advisor-card a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       JOIN
+    ========================== */
+
     .join-section {
       text-align: center;
     }
 
     .join-section p {
-      font-size: 18px;
+      max-width: 700px;
+
+      margin: 0 auto 25px;
+
       color: #555;
-      margin-bottom: 25px;
+
+      font-size: 18px;
     }
 
+
+    /* =========================
+       FOOTER
+    ========================== */
+
     footer {
-      background-color: #222;
+      background-color: #202020;
+
       color: white;
+
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
+
+      padding: 40px 20px;
+    }
+
+    footer img {
+      width: 70px;
+
+      background-color: white;
+
+      border-radius: 8px;
+
+      margin-bottom: 15px;
     }
 
     footer p {
-      margin: 6px 0;
+      margin: 5px 0;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 768px) {
 
       header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        gap: 12px;
       }
 
       nav {
         gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo-area h2 {
+        font-size: 18px;
+      }
+
+      .hero {
+        min-height: 500px;
       }
 
       .hero h1 {
         font-size: 40px;
       }
 
+      .hero h3 {
+        font-size: 20px;
+      }
+
       .hero p {
-        font-size: 18px;
+        font-size: 17px;
+      }
+
+      .hero-logo {
+        width: 120px;
+        height: 120px;
+      }
+
+      section {
+        padding: 60px 20px;
       }
 
       section h2 {
         font-size: 30px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <header>
-    <h2>PCC Academic Support Club</h2>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#resources">Resources</a>
-      <a href="#join">Join Us</a>
-    </nav>
-  </header>
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+
+  <div class="logo-area">
+
+    <img src="asc-logo.jpg"
+         alt="Academic Support Club Logo">
+
+    <h2>Academic Support Club</h2>
+
+  </div>
 
 
-  <section class="hero">
-    <h1>Academic Support Club</h1>
+  <nav>
+
+    <a href="#about">About</a>
+
+    <a href="#events">Events</a>
+
+    <a href="#resources">Resources</a>
+
+    <a href="#advisor">Advisor</a>
+
+    <a href="#join">Join Us</a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<div class="hero">
+
+  <div class="hero-content">
+
+    <img
+      class="hero-logo"
+      src="asc-logo.jpg"
+      alt="ASC Logo"
+    >
+
+    <h1>
+      Academic Support Club
+    </h1>
+
+    <h3>
+      Pasadena City College
+    </h3>
 
     <p>
       Connect. Learn. Transfer. Succeed.
     </p>
 
-    <a class="button" href="#join">
-      Join Us
-    </a>
-  </section>
-
-
-  <section id="about">
-
-    <h2>About Us</h2>
-
-    <p class="about-text">
-      The Academic Support Club at Pasadena City College is a
-      student-led community dedicated to helping students succeed
-      academically, discover transfer opportunities, connect with
-      campus resources, and build meaningful connections with other
-      PCC students.
-    </p>
-
-  </section>
-
-
-  <section>
-
-    <h2>What We Do</h2>
-
-    <div class="card-container">
-
-      <div class="card">
-        <h3>🎓 Transfer Support</h3>
-
-        <p>
-          Learn about UC and CSU transfer requirements, TAG,
-          UC TAP, ASSIST, application timelines, and transfer
-          preparation.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>📚 Academic Resources</h3>
-
-        <p>
-          Discover tutoring, counseling, academic planning,
-          scholarships, campus programs, and other resources
-          available to PCC students.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>🤝 Student Community</h3>
-
-        <p>
-          Meet other students, exchange advice, build friendships,
-          and become part of a supportive academic community.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>💡 Workshops</h3>
-
-        <p>
-          Attend workshops, guest speaker events, transfer panels,
-          study sessions, and academic success events.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section id="events">
-
-    <h2>Upcoming Events</h2>
-
-    <div class="card-container">
-
-      <div class="card">
-        <h3>Fall 2026 Welcome Meeting</h3>
-
-        <p>
-          Meet our officers, learn about our plans for the semester,
-          and connect with other PCC students.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>UC Transfer Workshop</h3>
-
-        <p>
-          Learn about UC applications, transfer requirements,
-          UC TAP, TAG, and strategies for preparing a competitive
-          transfer application.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>Student Social Event</h3>
-
-        <p>
-          Join us for a relaxed event where students can meet,
-          connect, and build friendships on campus.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section id="resources">
-
-    <h2>Student Resources</h2>
-
-    <div class="card-container">
-
-      <div class="card">
-        <h3>UC TAP</h3>
-
-        <p>
-          Plan your UC transfer coursework and track your academic
-          progress.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>ASSIST</h3>
-
-        <p>
-          Check how PCC courses articulate with California public
-          universities.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>PCC Counseling</h3>
-
-        <p>
-          Meet with counselors to create an educational plan,
-          prepare for transfer, and explore academic goals.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section id="join" class="join-section">
-
-    <h2>Join ASC</h2>
-
-    <p>
-      Want to meet other PCC students, learn about transfer
-      opportunities, and participate in our events?
-    </p>
-
-    <a class="button" href="#">
+    <a
+      class="button"
+      href="#join"
+    >
       Join Our Community
     </a>
 
-  </section>
+  </div>
+
+</div>
 
 
-  <footer>
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+  <h2>
+    About Us
+  </h2>
+
+  <p class="section-description">
+
+    The Academic Support Club at Pasadena City College
+    is a student-led community dedicated to helping
+    students succeed academically, discover transfer
+    opportunities, connect with campus resources,
+    and build meaningful connections with other
+    PCC students.
+
+  </p>
+
+
+  <div class="card-container">
+
+
+    <div class="card">
+
+      <h3>
+        🎓 Transfer Support
+      </h3>
+
+      <p>
+        Learn about UC and CSU transfer requirements,
+        TAG, UC TAP, ASSIST, application timelines,
+        and transfer preparation.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        📚 Academic Resources
+      </h3>
+
+      <p>
+        Discover tutoring, counseling, academic planning,
+        scholarships, campus programs, and other
+        opportunities available to PCC students.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        🤝 Student Community
+      </h3>
+
+      <p>
+        Meet other PCC students, exchange advice,
+        build friendships, and become part of a
+        supportive academic community.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        💡 Workshops
+      </h3>
+
+      <p>
+        Attend transfer workshops, guest speaker events,
+        student panels, study sessions, and academic
+        success events throughout the semester.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EVENTS
+========================== -->
+
+<section id="events">
+
+  <h2>
+    Upcoming Events
+  </h2>
+
+
+  <div class="card-container">
+
+
+    <div class="card">
+
+      <h3>
+        Fall 2026 Welcome Meeting
+      </h3>
+
+      <p>
+        Meet our officers, learn about our plans
+        for the semester, and connect with other
+        PCC students.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        UC Transfer Workshop
+      </h3>
+
+      <p>
+        Learn about UC transfer requirements,
+        UC TAP, TAG, ASSIST, and strategies
+        for preparing a strong transfer application.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        Community Events
+      </h3>
+
+      <p>
+        Connect with students through social events,
+        academic activities, workshops,
+        and campus involvement opportunities.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESOURCES
+========================== -->
+
+<section id="resources">
+
+  <h2>
+    Student Resources
+  </h2>
+
+
+  <div class="card-container">
+
+
+    <div class="card">
+
+      <h3>
+        UC TAP
+      </h3>
+
+      <p>
+        Plan your UC transfer coursework,
+        track your academic progress,
+        and prepare for the UC application.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        ASSIST
+      </h3>
+
+      <p>
+        Check course articulation agreements
+        between Pasadena City College
+        and California public universities.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        PCC Counseling
+      </h3>
+
+      <p>
+        Meet with PCC counselors to create
+        an educational plan, prepare for transfer,
+        and explore your academic goals.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ADVISOR
+========================== -->
+
+<section id="advisor">
+
+  <h2>
+    Club Advisor
+  </h2>
+
+
+  <div class="advisor-card">
+
+    <div class="advisor-icon">
+      👩‍🏫
+    </div>
+
+    <h3>
+      Shelagh Rose
+    </h3>
 
     <p>
-      PCC Academic Support Club
+      Primary Advisor
     </p>
 
     <p>
@@ -406,10 +734,86 @@
     </p>
 
     <p>
-      © 2026 Academic Support Club
+      Email:
+      <a href="mailto:serose@pasadena.edu">
+        serose@pasadena.edu
+      </a>
     </p>
 
-  </footer>
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     JOIN US
+========================== -->
+
+<section
+  id="join"
+  class="join-section"
+>
+
+  <h2>
+    Join ASC
+  </h2>
+
+  <p>
+
+    Interested in meeting other PCC students,
+    discovering academic and transfer opportunities,
+    and participating in our events?
+
+  </p>
+
+  <a
+    class="button"
+    href="#"
+  >
+    Join Our Community
+  </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <img
+    src="asc-logo.jpg"
+    alt="Academic Support Club Logo"
+  >
+
+  <p>
+    <strong>
+      Academic Support Club
+    </strong>
+  </p>
+
+  <p>
+    Pasadena City College
+  </p>
+
+  <p>
+    Advisor:
+    Shelagh Rose
+  </p>
+
+  <p>
+    serose@pasadena.edu
+  </p>
+
+  <p>
+    © 2026 Academic Support Club
+  </p>
+
+</footer>
+
 
 </body>
 
