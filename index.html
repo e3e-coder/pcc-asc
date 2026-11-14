@@ -21,19 +21,17 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f8f8f8;
+      background: #f7f7f7;
       color: #222;
       line-height: 1.6;
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================== */
+    /* NAVIGATION */
 
     header {
-      background-color: white;
-      padding: 12px 7%;
+      background: white;
+      padding: 12px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,7 +40,7 @@
       top: 0;
       z-index: 1000;
 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
     .logo-area {
@@ -52,78 +50,72 @@
     }
 
     .logo-area img {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       object-fit: contain;
-      border-radius: 6px;
     }
 
     .logo-area h2 {
-      color: #7b1e2b;
-      font-size: 20px;
+      color: #8c1d2c;
+      font-size: 21px;
     }
 
     nav {
       display: flex;
-      gap: 25px;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      text-decoration: none;
       color: #333;
-      font-weight: 600;
-      transition: 0.3s;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.25s;
     }
 
     nav a:hover {
-      color: #a32638;
+      color: #8c1d2c;
     }
 
 
-    /* =========================
-       HERO SECTION
-    ========================== */
+    /* HERO */
 
     .hero {
       min-height: 560px;
 
       background:
         linear-gradient(
-          rgba(0,0,0,0.50),
-          rgba(0,0,0,0.50)
-        ),
-        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
-
-      background-size: cover;
-      background-position: center;
+          135deg,
+          #741826,
+          #a72b3e
+        );
 
       display: flex;
       justify-content: center;
       align-items: center;
 
-      text-align: center;
       color: white;
+      text-align: center;
 
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
     }
 
     .hero-logo {
-      width: 150px;
-      height: 150px;
+      width: 155px;
+      height: 155px;
       object-fit: contain;
 
-      background-color: white;
+      background: white;
       border-radius: 50%;
-
-      padding: 10px;
+      padding: 12px;
 
       margin-bottom: 25px;
 
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
     .hero h1 {
@@ -132,9 +124,9 @@
     }
 
     .hero h3 {
-      font-size: 24px;
+      font-size: 27px;
       font-weight: normal;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .hero p {
@@ -143,103 +135,83 @@
     }
 
 
-    /* =========================
-       BUTTON
-    ========================== */
+    /* BUTTON */
 
     .button {
       display: inline-block;
 
-      background-color: #8d2235;
-      color: white;
-
-      padding: 14px 30px;
-
-      border-radius: 8px;
+      background: white;
+      color: #8c1d2c;
 
       text-decoration: none;
       font-weight: bold;
 
-      transition: 0.3s;
+      padding: 14px 30px;
+      border-radius: 8px;
+
+      transition: 0.25s;
     }
 
     .button:hover {
-      background-color: #681927;
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================== */
+    /* GENERAL */
 
     section {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 80px 25px;
     }
 
     section h2 {
       text-align: center;
-
+      color: #8c1d2c;
       font-size: 38px;
-
-      color: #7b1e2b;
-
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .section-description {
-      max-width: 800px;
-
-      margin: auto;
+      max-width: 850px;
+      margin: 0 auto 35px;
 
       text-align: center;
-
-      font-size: 18px;
-
       color: #555;
+      font-size: 18px;
     }
 
 
-    /* =========================
-       CARDS
-    ========================== */
+    /* CARDS */
 
     .card-container {
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
       gap: 25px;
-
       margin-top: 40px;
     }
 
     .card {
-      background-color: white;
-
-      padding: 30px;
+      background: white;
+      padding: 28px;
 
       border-radius: 14px;
 
       box-shadow: 0 5px 18px rgba(0,0,0,0.08);
 
-      transition: 0.3s;
+      transition: 0.25s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-
+      transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.13);
     }
 
     .card h3 {
-      color: #7b1e2b;
-
+      color: #8c1d2c;
       margin-bottom: 12px;
-
       font-size: 22px;
     }
 
@@ -248,53 +220,132 @@
     }
 
 
-    /* =========================
-       ADVISOR
-    ========================== */
+    /* PROFESSOR SECTION */
+
+    #professors {
+      max-width: 1000px;
+    }
+
+    .professor-note {
+      max-width: 850px;
+      margin: 0 auto 35px;
+
+      text-align: center;
+      font-size: 15px;
+      color: #777;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 18px;
+
+      border-radius: 14px;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 20px 25px;
+
+      font-size: 21px;
+      font-weight: bold;
+
+      color: #8c1d2c;
+
+      cursor: pointer;
+
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+
+      font-size: 26px;
+      color: #8c1d2c;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid #eee;
+    }
+
+    .professor-list {
+      padding: 5px 25px 15px;
+    }
+
+    .professor-row {
+      display: flex;
+      align-items: flex-start;
+
+      padding: 16px 5px;
+
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .professor-row:last-child {
+      border-bottom: none;
+    }
+
+    .course-name {
+      width: 230px;
+      flex-shrink: 0;
+
+      font-weight: bold;
+      color: #8c1d2c;
+    }
+
+    .professor-name {
+      color: #444;
+    }
+
+    .online {
+      color: #777;
+      font-style: italic;
+    }
+
+
+    /* ADVISOR */
 
     .advisor-card {
       max-width: 650px;
-
       margin: auto;
 
-      background-color: white;
+      background: white;
 
       padding: 40px;
 
       border-radius: 16px;
 
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-
       text-align: center;
-    }
 
-    .advisor-icon {
-      font-size: 45px;
-      margin-bottom: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
     }
 
     .advisor-card h3 {
-      font-size: 26px;
-
-      color: #7b1e2b;
-
-      margin-bottom: 10px;
+      color: #8c1d2c;
+      font-size: 27px;
+      margin-bottom: 8px;
     }
 
     .advisor-card p {
       color: #555;
-
-      margin-bottom: 6px;
-
-      font-size: 17px;
+      margin: 5px 0;
     }
 
     .advisor-card a {
-      color: #7b1e2b;
-
-      text-decoration: none;
-
+      color: #8c1d2c;
       font-weight: bold;
+      text-decoration: none;
     }
 
     .advisor-card a:hover {
@@ -302,32 +353,30 @@
     }
 
 
-    /* =========================
-       JOIN
-    ========================== */
+    /* JOIN */
 
     .join-section {
       text-align: center;
     }
 
     .join-section p {
-      max-width: 700px;
-
+      max-width: 720px;
       margin: 0 auto 25px;
 
       color: #555;
-
       font-size: 18px;
     }
 
+    .join-section .button {
+      background: #8c1d2c;
+      color: white;
+    }
 
-    /* =========================
-       FOOTER
-    ========================== */
+
+    /* FOOTER */
 
     footer {
-      background-color: #202020;
-
+      background: #202020;
       color: white;
 
       text-align: center;
@@ -336,9 +385,9 @@
     }
 
     footer img {
-      width: 70px;
+      width: 80px;
 
-      background-color: white;
+      background: white;
 
       border-radius: 8px;
 
@@ -350,11 +399,9 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* MOBILE */
 
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
 
       header {
         flex-direction: column;
@@ -362,29 +409,37 @@
       }
 
       nav {
-        gap: 14px;
-        flex-wrap: wrap;
         justify-content: center;
+        gap: 14px;
       }
 
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero h3 {
+        font-size: 22px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
       .logo-area h2 {
-        font-size: 18px;
+        font-size: 17px;
+      }
+
+      .logo-area img {
+        width: 48px;
+        height: 48px;
+      }
+
+      nav a {
+        font-size: 14px;
       }
 
       .hero {
         min-height: 500px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero h3 {
-        font-size: 20px;
-      }
-
-      .hero p {
-        font-size: 17px;
       }
 
       .hero-logo {
@@ -392,12 +447,29 @@
         height: 120px;
       }
 
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
       section {
-        padding: 60px 20px;
+        padding: 60px 18px;
       }
 
       section h2 {
         font-size: 30px;
+      }
+
+      .professor-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .course-name {
+        width: auto;
       }
 
     }
@@ -410,18 +482,20 @@
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================== -->
+<!-- NAVIGATION -->
 
 <header>
 
   <div class="logo-area">
 
-    <img src="asc-logo.jpg"
-         alt="Academic Support Club Logo">
+    <img
+      src="WeCha5.jpg"
+      alt="Academic Support Club Logo"
+    >
 
-    <h2>Academic Support Club</h2>
+    <h2>
+      Academic Support Club
+    </h2>
 
   </div>
 
@@ -434,6 +508,8 @@
 
     <a href="#resources">Resources</a>
 
+    <a href="#professors">Professors</a>
+
     <a href="#advisor">Advisor</a>
 
     <a href="#join">Join Us</a>
@@ -444,9 +520,7 @@
 
 
 
-<!-- =========================
-     HERO
-========================== -->
+<!-- HERO -->
 
 <div class="hero">
 
@@ -454,7 +528,7 @@
 
     <img
       class="hero-logo"
-      src="asc-logo.jpg"
+      src="WeCha5.jpg"
       alt="ASC Logo"
     >
 
@@ -483,9 +557,7 @@
 
 
 
-<!-- =========================
-     ABOUT
-========================== -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -510,9 +582,7 @@
 
     <div class="card">
 
-      <h3>
-        🎓 Transfer Support
-      </h3>
+      <h3>🎓 Transfer Support</h3>
 
       <p>
         Learn about UC and CSU transfer requirements,
@@ -525,9 +595,7 @@
 
     <div class="card">
 
-      <h3>
-        📚 Academic Resources
-      </h3>
+      <h3>📚 Academic Resources</h3>
 
       <p>
         Discover tutoring, counseling, academic planning,
@@ -540,14 +608,12 @@
 
     <div class="card">
 
-      <h3>
-        🤝 Student Community
-      </h3>
+      <h3>🤝 Student Community</h3>
 
       <p>
-        Meet other PCC students, exchange advice,
-        build friendships, and become part of a
-        supportive academic community.
+        Meet other students, exchange advice,
+        build friendships, and become part of
+        a supportive academic community.
       </p>
 
     </div>
@@ -555,14 +621,11 @@
 
     <div class="card">
 
-      <h3>
-        💡 Workshops
-      </h3>
+      <h3>💡 Workshops</h3>
 
       <p>
-        Attend transfer workshops, guest speaker events,
-        student panels, study sessions, and academic
-        success events throughout the semester.
+        Attend transfer workshops, student panels,
+        academic success events, and other club activities.
       </p>
 
     </div>
@@ -574,9 +637,7 @@
 
 
 
-<!-- =========================
-     EVENTS
-========================== -->
+<!-- EVENTS -->
 
 <section id="events">
 
@@ -584,20 +645,16 @@
     Upcoming Events
   </h2>
 
-
   <div class="card-container">
 
 
     <div class="card">
 
-      <h3>
-        Fall 2026 Welcome Meeting
-      </h3>
+      <h3>Club Meetings</h3>
 
       <p>
-        Meet our officers, learn about our plans
-        for the semester, and connect with other
-        PCC students.
+        Meet other members, discuss academic resources,
+        and learn about upcoming club activities.
       </p>
 
     </div>
@@ -605,14 +662,12 @@
 
     <div class="card">
 
-      <h3>
-        UC Transfer Workshop
-      </h3>
+      <h3>Transfer Workshops</h3>
 
       <p>
-        Learn about UC transfer requirements,
-        UC TAP, TAG, ASSIST, and strategies
-        for preparing a strong transfer application.
+        Learn more about transfer planning,
+        applications, university resources,
+        and academic preparation.
       </p>
 
     </div>
@@ -620,14 +675,12 @@
 
     <div class="card">
 
-      <h3>
-        Community Events
-      </h3>
+      <h3>Community Events</h3>
 
       <p>
-        Connect with students through social events,
-        academic activities, workshops,
-        and campus involvement opportunities.
+        Participate in academic, social,
+        and campus involvement opportunities
+        throughout the semester.
       </p>
 
     </div>
@@ -639,9 +692,7 @@
 
 
 
-<!-- =========================
-     RESOURCES
-========================== -->
+<!-- RESOURCES -->
 
 <section id="resources">
 
@@ -649,20 +700,16 @@
     Student Resources
   </h2>
 
-
   <div class="card-container">
 
 
     <div class="card">
 
-      <h3>
-        UC TAP
-      </h3>
+      <h3>UC TAP</h3>
 
       <p>
-        Plan your UC transfer coursework,
-        track your academic progress,
-        and prepare for the UC application.
+        Plan your UC transfer coursework
+        and prepare for the UC application process.
       </p>
 
     </div>
@@ -670,14 +717,11 @@
 
     <div class="card">
 
-      <h3>
-        ASSIST
-      </h3>
+      <h3>ASSIST</h3>
 
       <p>
         Check course articulation agreements
-        between Pasadena City College
-        and California public universities.
+        between PCC and California public universities.
       </p>
 
     </div>
@@ -685,14 +729,11 @@
 
     <div class="card">
 
-      <h3>
-        PCC Counseling
-      </h3>
+      <h3>PCC Counseling</h3>
 
       <p>
-        Meet with PCC counselors to create
-        an educational plan, prepare for transfer,
-        and explore your academic goals.
+        Meet with counselors for educational planning,
+        transfer preparation, and academic guidance.
       </p>
 
     </div>
@@ -704,9 +745,499 @@
 
 
 
-<!-- =========================
-     ADVISOR
-========================== -->
+<!-- PROFESSORS -->
+
+<section id="professors">
+
+  <h2>
+    Recommended Professors
+  </h2>
+
+  <p class="section-description">
+
+    A collection of student-recommended professors
+    for selected Pasadena City College courses.
+
+  </p>
+
+  <p class="professor-note">
+
+    Recommendations are based on student feedback and personal
+    experiences. They are not official evaluations or endorsements
+    by Pasadena City College or the Academic Support Club.
+
+  </p>
+
+
+  <!-- ENGLISH -->
+
+  <details>
+
+    <summary>
+      English & ESL
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">ENGL 1A</span>
+        <span class="professor-name">
+          John Davis, Juan Mendoza, Dustin Hanvey, Kristin Kaz
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ENGL 1C</span>
+        <span class="professor-name">
+          Juan Mendoza
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ENGL C1000H</span>
+        <span class="professor-name">
+          Dustin Hanvey
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ESL 1A</span>
+        <span class="professor-name">
+          Lindsey Ruiz
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ESL 004 / College 1</span>
+        <span class="professor-name">
+          Shelagh Rose
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+
+  <!-- MATH -->
+
+  <details>
+
+    <summary>
+      Mathematics & Statistics
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">MATH 003</span>
+        <span class="professor-name">
+          Matthew David, Roger Yang
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">MATH 005A</span>
+        <span class="professor-name">
+          Gonzaga Mendez, Gwendolyn Souza,
+          Roger Yang, Matthew David, Pete Riley
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">MATH 005B</span>
+        <span class="professor-name">
+          Gwendolyn Souza, Pete Riley,
+          Roger Yang, Matthew David
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">MATH 005C</span>
+        <span class="professor-name">
+          Gwendolyn Souza, Pete Riley
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">MATH 010</span>
+        <span class="professor-name">
+          Hoa Ly, Matthew David
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">MATH 055</span>
+        <span class="professor-name">
+          Hoa Ly, Matthew David
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">STAT 050</span>
+        <span class="professor-name">
+          Gonzaga Mendez
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+
+  <!-- ARTS & HUMANITIES -->
+
+  <details>
+
+    <summary>
+      Arts & Humanities
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">Cinema 7A</span>
+        <span class="professor-name">
+          Marcel, Foster
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CHIN 022</span>
+        <span class="professor-name">
+          Xiuzhi Wu <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHOT 002</span>
+        <span class="professor-name">
+          Eamon Conklin
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Humanities 001</span>
+        <span class="professor-name">
+          Kurt Forman, Thomas Kolba
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Chinese 004</span>
+        <span class="professor-name">
+          Xiu-zhi Wu
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+
+  <!-- SOCIAL SCIENCES -->
+
+  <details>
+
+    <summary>
+      Social & Behavioral Sciences
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">Sociology 001</span>
+        <span class="professor-name">
+          Katie Lookholder,
+          Elizabeth Ortega <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ANTH 001 / 001H</span>
+        <span class="professor-name">
+          Sarah Muno
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">GEOG 001</span>
+        <span class="professor-name">
+          Brennan Wallace <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">History 7A</span>
+        <span class="professor-name">
+          David Yabrra, Steven Rodriguez
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Psychology 001</span>
+        <span class="professor-name">
+          Emily B Bill
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Psychology 002</span>
+        <span class="professor-name">
+          Monica Coto
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Psychology 003</span>
+        <span class="professor-name">
+          Monica Coto <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Psychology 005</span>
+        <span class="professor-name">
+          Julie Kiotas <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Psychology 023</span>
+        <span class="professor-name">
+          Joshua Matacotta
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">Political Science 001 / 001H</span>
+        <span class="professor-name">
+          Marcus Green, David Andrus
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ECON 001A</span>
+        <span class="professor-name">
+          Jenni Kim <span class="online">(online)</span>,
+          Rebecca Johannsen <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ECON 001B</span>
+        <span class="professor-name">
+          Jenni Kim <span class="online">(online)</span>,
+          Rebecca Johannsen
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+
+  <!-- SCIENCE -->
+
+  <details>
+
+    <summary>
+      Science
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">CHEM -22</span>
+        <span class="professor-name">
+          Benson Ngo <span class="online">(online)</span>,
+          Alnald Javier,
+          Rebekah Cordeiro
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CHEM 001A</span>
+        <span class="professor-name">
+          Mohammad Salameh, Alireza Ansari
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CHEM 001B</span>
+        <span class="professor-name">
+          Alireza Ansari
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CHEM 8A</span>
+        <span class="professor-name">
+          Gidget Tay
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CHEM 8B</span>
+        <span class="professor-name">
+          Gidget Tay
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHYS 010</span>
+        <span class="professor-name">
+          Jiashi
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHYS 108</span>
+        <span class="professor-name">
+          Rodolfo Santana
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHYS 008A</span>
+        <span class="professor-name">
+          Rodolfo Santana, Jiashi
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHYS 008B</span>
+        <span class="professor-name">
+          Erick Sturm, Jiashi
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">PHYS 008C</span>
+        <span class="professor-name">
+          Jiashi
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ENVS</span>
+        <span class="professor-name">
+          Russell Di Fiori <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">BIO 10A</span>
+        <span class="professor-name">
+          Elizabeth
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">BIO 10B</span>
+        <span class="professor-name">
+          Russel DiFiori
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">BIO 10C</span>
+        <span class="professor-name">
+          Jacqueline Duvall
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">BIO 011</span>
+        <span class="professor-name">
+          Aulikki Pekkala-Flagan <span class="online">(online)</span>,
+          Jessica Blickley <span class="online">(online)</span>
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+
+  <!-- CS & BUSINESS -->
+
+  <details>
+
+    <summary>
+      Computer Science & Business
+    </summary>
+
+    <div class="professor-list">
+
+      <div class="professor-row">
+        <span class="course-name">CS 002</span>
+        <span class="professor-name">
+          Keng Chang, Mayada Alani, Hilario Balajada Jr
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CS 003A</span>
+        <span class="professor-name">
+          Stephen Wang, Lee Ji
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CS 003B</span>
+        <span class="professor-name">
+          Keng Chang, Garen Kutukian
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">CIS 010</span>
+        <span class="professor-name">
+          Pixie Boyden
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ACCT 001A</span>
+        <span class="professor-name">
+          Maura Epstein,
+          Michelle Lee <span class="online">(online)</span>,
+          Mariam Katrjyan <span class="online">(online)</span>,
+          Melissa Keeslar <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">ACCT 001B</span>
+        <span class="professor-name">
+          Maura Epstein,
+          Mariam Katrjyan <span class="online">(online)</span>
+        </span>
+      </div>
+
+      <div class="professor-row">
+        <span class="course-name">NUTR 011</span>
+        <span class="professor-name">
+          Priya Venkatesan <span class="online">(online)</span>
+        </span>
+      </div>
+
+    </div>
+
+  </details>
+
+
+</section>
+
+
+
+<!-- ADVISOR -->
 
 <section id="advisor">
 
@@ -714,12 +1245,7 @@
     Club Advisor
   </h2>
 
-
   <div class="advisor-card">
-
-    <div class="advisor-icon">
-      👩‍🏫
-    </div>
 
     <h3>
       Shelagh Rose
@@ -734,10 +1260,13 @@
     </p>
 
     <p>
+
       Email:
+
       <a href="mailto:serose@pasadena.edu">
         serose@pasadena.edu
       </a>
+
     </p>
 
   </div>
@@ -746,9 +1275,7 @@
 
 
 
-<!-- =========================
-     JOIN US
-========================== -->
+<!-- JOIN -->
 
 <section
   id="join"
@@ -763,7 +1290,8 @@
 
     Interested in meeting other PCC students,
     discovering academic and transfer opportunities,
-    and participating in our events?
+    sharing student resources, and participating
+    in club events?
 
   </p>
 
@@ -778,14 +1306,12 @@
 
 
 
-<!-- =========================
-     FOOTER
-========================== -->
+<!-- FOOTER -->
 
 <footer>
 
   <img
-    src="asc-logo.jpg"
+    src="WeCha5.jpg"
     alt="Academic Support Club Logo"
   >
 
@@ -800,8 +1326,7 @@
   </p>
 
   <p>
-    Advisor:
-    Shelagh Rose
+    Advisor: Shelagh Rose
   </p>
 
   <p>
