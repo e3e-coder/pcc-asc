@@ -25,6 +25,39 @@
       color: #222;
       line-height: 1.6;
     }
+    .join-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.wechat-box {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.wechat-qr {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.wechat-box h3 {
+  color: #8c1d2c;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.wechat-box p {
+  margin: 8px 0;
+  color: #555;
+}
 
 
     /* NAVIGATION */
@@ -1291,31 +1324,71 @@
   </p>
 
   <p>
-    我们提供微信学习交流学术大群作为平台，大家可以在群里交流课程、选课、教授推荐、
+    我们有微信学习交流学术大群，大家可以在群里交流课程、选课、教授推荐、
     转学申请、学习资源以及校园信息。欢迎 PCC 同学联系我们加入。
   </p>
 
-  <div class="wechat-box">
 
-    <img
-      src="Joinus.jpg"
-      alt="Academic Support Club WeChat QR Code"
-      class="wechat-qr"
-    >
+  <div class="join-grid">
 
-    <h3>
-      WeChat Study & Academic Community
-    </h3>
 
-    <p>
-      微信学习交流学术大群
-    </p>
+    <!-- WECHAT -->
 
-    <p>
-      Scan the QR code or contact us to join.
-      <br>
-      扫描二维码联系我们加入微信群～
-    </p>
+    <div class="wechat-box">
+
+      <img
+        src="Joinus.jpg"
+        alt="Academic Support Club WeChat QR Code"
+        class="wechat-qr"
+      >
+
+      <h3>
+        WeChat Study & Academic Community
+      </h3>
+
+      <p>
+        微信学习交流学术大群
+      </p>
+
+      <p>
+        Scan the QR code or contact us to join.
+        <br>
+        扫描二维码或联系我们加入微信群。
+      </p>
+
+    </div>
+
+
+    <!-- LANCERLIFE -->
+
+    <div class="wechat-box">
+
+      <img
+        src="lancerlife.jpg"
+        alt="Academic Support Club LancerLife QR Code"
+        class="wechat-qr"
+      >
+
+      <h3>
+        Join ASC on LancerLife
+      </h3>
+
+      <p>
+        在 LancerLife 加入 Academic Support Club
+      </p>
+
+      <p>
+        Scan the QR code, or search
+        <strong>Academic Support Club</strong>
+        on LancerLife to join our club.
+        <br><br>
+        也可以扫描这个二维码，或者在 LancerLife 中搜索
+        <strong>Academic Support Club</strong>
+        加入我们社团。期待你的加入！
+      </p>
+
+    </div>
+
 
   </div>
 
